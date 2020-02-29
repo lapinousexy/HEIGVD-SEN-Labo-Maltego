@@ -80,3 +80,33 @@ On peut vérifier cette information en regardant les headers HTTP du site:
 
 Le serveur WEB tourne bien avec nginx (en tout cas si on en croit les headers...).
 
+En rescannant le domaine de l'EPFL (epfl.ch), on peut voir des fichiers malicieux en rapport avec ce domaine:
+
+![](images/SEN_Labo01_Image014.png)
+
+En cherchant le domaine de l'EPFL sur VirusTotal, on voit que ces fichiers sont en rapport avec l'EPFL car il communique avec le domaine de l'EPFL (peut-être ce sont des tests d'étudiant ou des recherches de certain professeur).
+
+![](images/SEN_Labo01_Image015.png)
+
+En faisant les transform Shodan sur les adresses IP trouvé (128.178.222.69), on peut voir les services qui tourne sur cette adresses, ici on voit le port 443 (https) et 80 (http):
+
+![](images/SEN_Labo01_Image016.png)
+
+## Et maintenant ?
+
+J'ai installer la transform "Have I Been Pwned", et j'ai fait les transform sur les adresses e-mail de "Bastien Gardel" à partir du domaine de la HEIG-VD (heig-vd.ch):
+
+![](images/SEN_Labo01_Image018.png)
+
+On peut voir que ses adresses mail se sont retrouvées dans plusieurs fuites de donnée, notamment sur le site dropbox.com, ce qui indique qu'il est possible de retrouver des hash de ses anciens mot de passe, ou peut-être des anciens mot de passe en clair.
+
+J'ai ensuite essayé de trouver des informations à partir d'un de mes pseudos (lapinousexy):
+
+![](images/SEN_Labo01_Image017.png)
+
+On peut trouver mon compte GitHub, Dailymotion, mais aussi d'autre copmte qui ne m'appartiennent pas (Pinterest et Wordpress).
+
+**Est-ce que le graph devient difficile à gérer ?**
+```
+Oui il devient complexe, surtout si on rajoute beaucoup de transform ou si le domaine est très grand (epfl.ch), mais on sent que les developpeur de Maltego on fait un effort pour le rendre le plus lisible possible, notamment en réorganisant les informations si de nouvelles informations s'ajoutent au graph, afin de garder une bonne visibilité.
+```
