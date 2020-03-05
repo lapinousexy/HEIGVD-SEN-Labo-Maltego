@@ -2,7 +2,7 @@
 
 ## Domaine
 
-J'ai choisi une entreprise de consulting au hasard sur internet appelé Farner, https://www.farner.ch/fr/sites/lausanne/.
+Nous avons choisi une entreprise de consulting au hasard sur internet appelé Farner, https://www.farner.ch/fr/sites/lausanne/.
 
 ![](images/SEN_Labo01_Image01.png)
 
@@ -18,7 +18,7 @@ En appliquant les transformations sur l'employé "Christian Koenig", on obtient 
 
 Malheuresement ces e-mails/clés PGP semble être des faux positifs.
 
-J'ai donc tester avec un domaine plus grand, celui de l'epfl (epfl.ch), et j'ai appliquer les transformations sur le chercheur Philippe A Oechslin:
+J'ai donc testé avec un domaine plus grand, celui de l'epfl (epfl.ch), et j'ai appliqué les transformations sur le chercheur Philippe A Oechslin:
 
 ![](images/SEN_Labo01_Image04.png)
 
@@ -30,9 +30,9 @@ Cette fois ci les e-mails et clés PGP sont réelles.
 
 ## Recherche d'une identité
 
-J'ai d'abord testé avec mon nom (Jérôme Bagnoud), mais je n'ai rien trouver.
+J'ai d'abord testé avec mon nom (Jérôme Bagnoud), mais je n'ai rien trouvé.
 
-J'ai testé pas mal de personne (des proches, des membres d'entreprise diverses), mais je n'ai rien trouvé, j'ai donc opter pour une "personnalité publique": Julian Assange
+J'ai testé pas mal de personnes (des proches, des membres d'entreprise diverses), mais je n'ai rien trouvé, j'ai donc opté pour une "personnalité publique": Julian Assange
 
 ![](images/SEN_Labo01_Image07.png)
 
@@ -42,13 +42,13 @@ Et la encore on trouve les diverses adresses mail (notament du domaine wikileaks
 
 ## Recherche d'une adresse email
 
-J'ai essayer cette lsite d'adresse mail:
+J'ai essayé cette lsite d'adresse mail:
 
 1) jerome.bagnoud@heig-vd.ch
 2) lapinousexy@gmail.com
 3) divers adresses venant de mon projet d'AST
 
-Mais aucune n'ont donnée de résultat concluant.
+Mais aucune n'ont donné de résultat concluant.
 
 ## Installation et utilisation de nouvelles transformations
 
@@ -56,17 +56,17 @@ Après avoir installé les trois transformations je vais relancer les recherches
 
 ### Domaine
 
-Je reprend le domaine farner.ch:
+Je reprends le domaine farner.ch:
 
 ![](images/SEN_Labo01_Image09.png)
 
-On peut par exemple voir un nouvel élément intéressant qui est un id YouTube (agenturfarner), si on le rentre dans la barre de recherche de YouTube, on découvre la chaîne YouTube de l'entreprise Farner Consulting AG: https://www.youtube.com/channel/UCklqKEAz1hWTJ5MbLA26Viw
+On peut par exemple voir un nouvel élément intéressant qui est un id YouTube (agenturfarner). Si on le rentre dans la barre de recherche de YouTube, on découvre la chaîne YouTube de l'entreprise Farner Consulting AG: https://www.youtube.com/channel/UCklqKEAz1hWTJ5MbLA26Viw
 
 On a aussi un compte Instagram:
 
 ![](images/SEN_Labo01_Image010.png)
 
-Qui quand on va le voir (https://www.instagram.com/agenturfarner/) est bien celui de l'entreprise en question:
+Qui, quand on va le voir (https://www.instagram.com/agenturfarner/) est bien celui de l'entreprise en question:
 
 ![](images/SEN_Labo01_Image011.png)
 
@@ -84,17 +84,17 @@ En rescannant le domaine de l'EPFL (epfl.ch), on peut voir des fichiers malicieu
 
 ![](images/SEN_Labo01_Image014.png)
 
-En cherchant le domaine de l'EPFL sur VirusTotal, on voit que ces fichiers sont en rapport avec l'EPFL car il communique avec le domaine de l'EPFL (peut-être ce sont des tests d'étudiant ou des recherches de certain professeur).
+En cherchant le domaine de l'EPFL sur VirusTotal, on voit que ces fichiers sont en rapport avec l'EPFL car il communique avec le domaine de l'EPFL (peut-être ce sont des tests d'étudiants ou des recherches de certain professeurs).
 
 ![](images/SEN_Labo01_Image015.png)
 
-En faisant les transform Shodan sur les adresses IP trouvé (128.178.222.69), on peut voir les services qui tourne sur cette adresses, ici on voit le port 443 (https) et 80 (http):
+En faisant les transform Shodan sur les adresses IP trouvées (128.178.222.69), on peut voir les services qui tourne sur cette adresse, ici on voit le port 443 (https) et 80 (http):
 
 ![](images/SEN_Labo01_Image016.png)
 
 ## Et maintenant ?
 
-J'ai installer la transform "Have I Been Pwned", et j'ai fait les transform sur les adresses e-mail de "Bastien Gardel" à partir du domaine de la HEIG-VD (heig-vd.ch):
+J'ai installé la transform "Have I Been Pwned", et j'ai fait les transform sur les adresses e-mail de "Bastien Gardel" à partir du domaine de la HEIG-VD (heig-vd.ch):
 
 ![](images/SEN_Labo01_Image018.png)
 
@@ -104,9 +104,8 @@ J'ai ensuite essayé de trouver des informations à partir d'un de mes pseudos (
 
 ![](images/SEN_Labo01_Image017.png)
 
-On peut trouver mon compte GitHub, Dailymotion, mais aussi d'autre copmte qui ne m'appartiennent pas (Pinterest et Wordpress).
+On peut trouver mon compte GitHub, Dailymotion, mais aussi d'autres comptes qui ne m'appartiennent pas (Pinterest et Wordpress).
 
 **Est-ce que le graph devient difficile à gérer ?**
-```
-Oui il devient complexe, surtout si on rajoute beaucoup de transform ou si le domaine est très grand (epfl.ch), mais on sent que les developpeur de Maltego on fait un effort pour le rendre le plus lisible possible, notamment en réorganisant les informations si de nouvelles informations s'ajoutent au graph, afin de garder une bonne visibilité.
-```
+
+Oui il devient complexe, surtout si on rajoute beaucoup de transform ou si le domaine est très grand (epfl.ch), mais on sent que les developpeurs de Maltego on fait un effort pour le rendre le plus lisible possible, notamment en réorganisant la structure si de nouvelles informations s'ajoutent au graph, afin de garder une bonne visibilité.
